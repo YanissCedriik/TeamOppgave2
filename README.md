@@ -41,6 +41,8 @@ for he purpose of a demostration.
 
 ## Credits
 
+@amy@yannis@nico@krigjo25
+
 
 ##  Summary
 

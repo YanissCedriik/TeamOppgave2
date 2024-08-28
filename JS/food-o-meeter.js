@@ -42,6 +42,7 @@ function decrease_bar()
     }
     return;
 }
+
 function bar_warning()
 {
     if (barometer == 4){return warning = "Full !";}
