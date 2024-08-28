@@ -1,3 +1,4 @@
+
 //@krigjo25
 
 // modal
@@ -17,6 +18,7 @@ function calculate_ms()
     }
     return sec;
 }
+
 
 function refill_food_o_meeter()
 {
@@ -54,7 +56,7 @@ function bar_warning()
 function foodOMeter()
 {
     // Fetch the elements id.
-    let id = document.getElementById('progress-bar-id');
+    let id = document.getElementById('progress-bar');
     let label= document.getElementById('food-label');
     let prog = document.getElementById('progress-label');
     
@@ -69,6 +71,6 @@ function main()
 {
         timer = setInterval(calculate_ms, 100);
 
-    return;
+    return
 }
 main();
