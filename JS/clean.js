@@ -1,8 +1,8 @@
 // Yaniss
 
 //-----------Variables-------------
-const barOutput = document.getElementById("clean-progress") ;
-const output =  document.getElementById("howCleanBar") ;
+const barOutput = document.getElementById("clean-progress");
+const output = document.getElementById("howCleanBar");
 let isMartinClean = true;
 let seconds = 0;
 let minutes = 0;
@@ -25,8 +25,8 @@ function cleanTimer() {
         }
     }, 1000);
 
-    output.innerHTML = cleanliness + "%" ;
-    barOutput.style.width = cleanliness + "%" ;
+    output.innerHTML = cleanliness + "%";
+    barOutput.style.width = cleanliness + "%";
 }
 
 function deCleanMartin() {
@@ -35,30 +35,28 @@ function deCleanMartin() {
     cleanliness -= 5;
 
     if (cleanliness <= 35) {
-        changeImage('dirty');
+        changeImage("dirty");
     }
-    output.innerHTML = cleanliness + "%" ;
-    barOutput.style.width = cleanliness + "%" ;
+    output.innerHTML = cleanliness + "%";
+    barOutput.style.width = cleanliness + "%";
 }
 
 function cleanMartin() {
-    
-    cleanliness += 5 ;
-    
-    if(cleanliness >= 50){
-        changeImage('clean')
+    cleanliness += 5;
+
+    if (cleanliness >= 50) {
+        changeImage("clean");
     }
-    
-    limitCleanliness()
-    output.innerHTML = cleanliness + "%" ;
-    barOutput.style.width = cleanliness + "%" ; 
+
+    limitCleanliness();
+    output.innerHTML = cleanliness + "%";
+    barOutput.style.width = cleanliness + "%";
 }
 
-
-function limitCleanliness(){
-    if(cleanliness >= 100){
-        cleanliness = 100 ;
-    } else if (cleanliness <= 0){
-        cleanliness = 0 ;
-        }
+function limitCleanliness() {
+    if (cleanliness >= 100) {
+        cleanliness = 100;
+    } else if (cleanliness <= 0) {
+        cleanliness = 0;
+    }
 }
