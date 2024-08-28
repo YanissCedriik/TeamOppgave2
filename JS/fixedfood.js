@@ -1,4 +1,3 @@
-
 //@krigjo25
 
 // modal
@@ -56,13 +55,14 @@ function bar_warning()
 function foodOMeter()
 {
     // Fetch the elements id.
-    let id = document.getElementById('progress-bar-id');
+    let id = document.getElementById('progress-bar');
     let label= document.getElementById('food-label');
     let prog = document.getElementById('progress-label');
     
-        id.style.inlineSize = barometer + '%';
-        label.innerHTML = `${bar_warning()}` ;
-        prog.innerHTML = `${barometer}%` ;
+    id.style.inlineSize = barometer;
+    label.innerHTML = `${bar_warning()}`;
+    
+    prog.innerHTML = `${barometer}%`;
 
     return;
 }
