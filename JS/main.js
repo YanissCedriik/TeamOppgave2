@@ -1,17 +1,7 @@
-// Model
+// Modal
 let html = "";
 let count_food = 0;
 
-//Amy Var
-let happytime = 0;
-
-// Yaniss Var
-const output = document.getElementById('howCleanBar') ;
-let isMartinClean = true;
-let timer;
-let seconds = 0;
-let minute = 0;
-let cleanliness = 100;
 
 //  Controller
 
@@ -70,96 +60,6 @@ function refill_food_o_meeter()
     return foodOMeter(food_count++);
 
 }
-// Amy
-function playtime(happytime){
-    
-    if(happytime == 4) {
-        document.getElementById('mood-progress').innerHTML = /*Html*/`
-        
-        `
-        
-
-       setTimeout(sadtime(),15000)
-    } else if (happytime == 3){
-    
-        setTimeout(sadtime(),15000)
-    } else if(happytime == 2){
-        
-        setTimeout(sadtime(),15000)
-    } else if(happytime == 1){
-
-    }
-    
-    
-}
-
-function sadtime(){
-    happytime -= 1
-}
-function play(){
-    if(happytime == 4){
-    } else{
-   happytime += 1}
-}
-
-
-
-
-
-
-
-//Yaniss
-cleanTimer()
-function cleanTimer() {
-      let timer =  setInterval(function() {
-            seconds++;
-            if(seconds == 10){
-                minute++;
-                seconds = 0;
-            }
-            if(minute === 1){
-                minute = 0;
-                deCleanMartin();
-                clearInterval(timer) 
-            }  
-        }, 1000);
-    }       
-
-
-
-function deCleanMartin() {
-    cleanTimer()
-    isMartinClean = false;
-    cleanliness -= 10;
-    output.innerHTML = cleanliness + "%"
-
-    if (cleanliness <= 50){
-        changeImage("dirty")
-    }
-    
-}
-
-function cleanMartin(){
-    cleanliness += 5;
-    
-    if(cleanliness => 50){
-        changeImage("clean")
-    }
-    
-    if(cleanliness >= 100){
-        cleanliness = 100;
-    }
-    output.innerHTML = cleanliness + "%"
-}
-
-//function limitCleanliness(){
-//    limitCleanliness();
-//}
-
-
-
-
-
 
 function changeImage(state) {
     var imageElement = document.getElementById('animal-image');
