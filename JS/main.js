@@ -15,3 +15,6 @@ function changeImage(state) {
             "https://cdn.discordapp.com/attachments/1268499932604796972/1277554115182071833/koala_happy.png?ex=66cf90bc&is=66ce3f3c&hm=fb544fe2485bc51a839c0bae8925353a87990e7f4bf0ca36953e0d7b791fc92e&";
     }
 }
+
+
+
