@@ -1,30 +1,32 @@
-
 //@krigjo25
 
-// modal
+// modal -> Initializing the data
 let sec = 0;
 let html = "";
-
 let barometer = 100;
 
-//  Controller
+//  Controller -> Manipulates the data and view
 function calculate_ms()
 {
     sec++
-    
+
+    //  Ensures that the function decreases the bar every second
     if (sec == 1)
     {
         sec = 0;
-        return decrease_bar();
+        decrease_bar();
     }
-    return sec;
+
+    return;
 }
 
 
 function refill_food_o_meeter()
 {
+    // Ensure that the barometer is below 75%
     if (barometer < 75)
     {
+        //  Add 10 % to barometer
         barometer += 10;
     }
 
@@ -34,11 +36,12 @@ function refill_food_o_meeter()
 
 function decrease_bar()
 {
-
     //  Ensure that bar-o-meeter is not below 0
     if (barometer > 0)
     {
-        barometer -=1;
+        //  Decrease bar
+        barometer --;
+
         return foodOMeter();
     }
     return;
@@ -46,33 +49,34 @@ function decrease_bar()
 
 function bar_warning()
 {
-    if (barometer >= 75){return warning = "Full !";}
-    else if (barometer < 75 & barometer >= 50){return warning = "Feeling a bit hungry !";}
-    else if (barometer < 50 & barometer > 25){return warning = "hangry";}
-    else
-        return warning = "Starving !";
+    //  Ensure that barometer contains the values as presented
+    if (barometer >= 75){return "Full !";}
+    else if (barometer < 75 & barometer >= 50){return "Feeling a bit hungry !";}
+    else if (barometer < 50 & barometer > 25){return "hangry";}
+    
+    return "Starving !";
 }
-// View
 
+// View -> Reperesents the data
 function foodOMeter()
 {
-    // Fetch the elements id.
-    let id = document.getElementById('progress-bar');
+    // Fetch the DOM ids.
+    let bar = document.getElementById('progress-bar');
     let label= document.getElementById('food-label');
     let prog = document.getElementById('progress-label');
     
     //  Manipulate the DOM
-    id.style.inlineSize = barometer + "%";
+    bar.style.inlineSize = barometer + "%";
     label.innerHTML = `${bar_warning()}`;
     prog.innerHTML = `${barometer}%`;
 
-
     return;
 }
+
 function main()
 {
-        timer = setInterval(calculate_ms, 1000);
-
-    return
+    //  Start the interval
+    setInterval(calculate_ms, 1000);
+    return;
 }
 main();
