@@ -18,7 +18,7 @@ function foodOMeter()
 {
     
     //  Manipulate the DOM
-    document.getElementById('progress-bar').style.inlineSize = barometer + "%";
+    document.getElementById('progress-bar-id').style.inlineSize = barometer + "%";
     document.getElementById('food-label').innerHTML = `${bar_warning()}`;
     document.getElementById('progress-label').innerHTML = `${barometer}%`;
 
